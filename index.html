@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='ja'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Slide FV</title>
+  <link rel='stylesheet' href='css/style.css'>
+  <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+  <script src='https://www.jsviews.com/download/jsrender.js'></script>
+</head>
+
+<body>
+  <div class='fv' id="fv">
+    <div class='slider' id='slider'>
+      <script>
+        window.DATA_SLIDES = [
+          {
+            url: 'https://picsum.photos/800/600?random=1',
+            type: 'image',
+            title: '#阿部寛',
+            description: 'あべひろし'
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=2',
+            type: 'image',
+            title: '公式YouTube',
+            description: '＼Follow us／'
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=3',
+            type: 'image',
+            title: '公式Twitter',
+            description: '＼Follow us／'
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=4',
+            type: 'image',
+            title: '公式LINE',
+            description: '＼Follow us／'
+          },
+          {
+            url: 'https://nyushi.kobe-wu.ac.jp/shared/img/bnr/pv.mp4',
+            type: 'video',
+            title: '公式Instagram',
+            description: '＼Follow us／'
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=5',
+            type: 'image',
+            title: 'サンシャイン',
+            description: '＼イケザキ／'
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=6',
+            type: 'image',
+            title: 'OPEN CAMPUS',
+            description: null
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=7',
+            type: 'image',
+            title: 'SHINJO MOVIE',
+            description: null
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=8',
+            type: 'image',
+            title: 'Career Palate',
+            description: null
+          },
+          {
+            url: 'https://nyushi.kobe-wu.ac.jp/shared/img/bnr/movie.mp4',
+            type: 'video',
+            title: 'SHINJO MAG',
+            description: '色々なメディア'
+          },
+          {
+            url: 'https://picsum.photos/800/600?random=9',
+            type: 'image',
+            title: '潮風Days',
+            description: null
+          },
+        ];
+      </script>
+      <script id='template_items' type='text/x-jsrender'>
+        <ul class='list' id='list_{{:version}}'>
+          {{for items}}
+            <li class='item{{if active}} active{{/if}}'>
+              {{if type === 'image'}}
+                <img src='{{:url}}' alt='{{:title}}'>
+              {{else}}
+                <video autoplay loop muted src='{{:url}}'></video>
+              {{/if}}
+              <div class='cover'>
+                <div class='bg'></div>
+                <div class="content">
+                  <p class='title'>{{:title}}</p>
+                  <p class='description'>{{:description}}</p>
+                </div>
+              </div>
+            </li>
+          {{/for}}
+        </ul>
+      </script>
+
+      <div class="list loading" id="loading">
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+        <li class="item skelton">
+          <div class="rect"></div>
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <script src='js/main.min.js'></script>
+</body>
+
+</html>

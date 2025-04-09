@@ -1,0 +1,22 @@
+{
+  "name": "slide-fv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "uglify": "uglifyjs js/main.js --compress --mangle --output ./js/main.min.js",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,html}\"",
+    "build": "npm run uglify",
+    "start": "serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "uglify-js": "^3.19.3"
+  }
+}
