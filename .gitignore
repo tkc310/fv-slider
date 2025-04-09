@@ -10,7 +10,6 @@ package-lock.json
 # Build output
 dist/
 build/
-*.min.js
 
 # IDE and editor files
 .idea/
