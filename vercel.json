@@ -16,8 +16,20 @@
   ],
   "routes": [
     {
+      "src": "/css/styles.css",
+      "dest": "/css/styles.css"
+    },
+    {
+      "src": "/js/main.min.js",
+      "dest": "/js/main.min.js"
+    },
+    {
+      "src": "/js/main.js",
+      "dest": "/js/main.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/index.html"
     }
   ]
 }
