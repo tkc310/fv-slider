@@ -125,7 +125,7 @@ const listSequence = async (data, version, $prevList) => {
   const $list = appendList(version, shuffle(data));
   changeActiveGrid(9, $list);
 
-  const adjust = version * 1000;
+  const adjust = (version * 1000) / 2;
 
   await awaitableTimeout(15000 + adjust);
   changeActiveGrid('none', $prevList);
