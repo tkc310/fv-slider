@@ -28,7 +28,7 @@
       "dest": "/js/main.js"
     },
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/index.html"
     }
   ]
